@@ -1,0 +1,6 @@
+build/
+node_modules/
+dist/
+.mise.local.toml
+.DS_Store
+.yarn/install-state.gz

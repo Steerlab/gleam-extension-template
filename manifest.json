@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Extension",
+  "version": "1.0.0",
+  "action": {
+    "default_title": "Click to open panel"
+  },
+  "side_panel": { "default_path": "index.html" },
+  "permissions": ["sidePanel", "activeTab", "scripting", "tabs", "identity"],
+  "content_scripts": [{ "matches": ["<all_urls>"], "js": ["src/page-script.ts"] }],
+  "background": {
+    "service_worker": "src/background.ts",
+    "type": "module"
+  }
+}
